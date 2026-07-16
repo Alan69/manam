@@ -256,8 +256,8 @@ const kk: typeof ru = {
 
 i18n.use(initReactI18next).init({
   resources: { ru: { translation: ru }, kk: { translation: kk } },
-  lng: localStorage.getItem('lang') ?? 'ru',
-  fallbackLng: 'ru',
+  lng: localStorage.getItem('lang') ?? 'kk',
+  fallbackLng: 'kk',
   interpolation: { escapeValue: false },
 })
 
