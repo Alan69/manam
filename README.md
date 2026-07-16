@@ -21,9 +21,9 @@ update public.profiles set role = 'admin' where full_name = 'ВАШЕ ИМЯ';
 
 (или по email: `where id = (select id from auth.users where email = 'you@mail.com')`)
 
-### 3. Google OAuth (опционально)
+### 3. Отключить подтверждение email
 
-Dashboard → Authentication → Providers → Google → включить и указать Client ID/Secret. Кнопка «Войти через Google» уже есть на страницах входа.
+Dashboard → Authentication → Sign In / Providers → Email → выключить «Confirm email». Иначе регистрация требует перехода по ссылке из письма (встроенная почта Supabase — ~2 письма/час).
 
 ### 4. Локальная разработка
 

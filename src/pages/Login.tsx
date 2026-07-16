@@ -25,13 +25,6 @@ export default function Login() {
     else navigate('/profile')
   }
 
-  async function google() {
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: window.location.origin + '/profile' },
-    })
-  }
-
   return (
     <div className="max-w-sm mx-auto px-4 py-12">
       <h1 className="text-2xl font-bold text-center">{t('auth.login')}</h1>
@@ -61,12 +54,6 @@ export default function Login() {
           {t('auth.login')}
         </button>
       </form>
-      <button
-        onClick={google}
-        className="mt-3 w-full border border-stone-300 rounded-lg py-2.5 hover:bg-stone-50"
-      >
-        {t('auth.google')}
-      </button>
       <p className="mt-4 text-center text-sm">
         <Link to="/register" className="text-amber-800 hover:underline">
           {t('auth.noAccount')}
